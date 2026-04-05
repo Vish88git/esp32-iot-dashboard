@@ -1,0 +1,15 @@
+apiVersion: 1
+
+datasources:
+  - name: InfluxDB
+    type: influxdb
+    access: proxy
+    url: http://influxdb:8086
+    jsonData:
+      version: Flux
+      organization: esp32org
+      defaultBucket: keyword_events
+      tlsSkipVerify: true
+    secureJsonData:
+      token: esp32-token-secret
+    isDefault: true
